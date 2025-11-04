@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Lis 04, 2025 at 10:42 AM
+-- Generation Time: Lis 04, 2025 at 11:00 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.0.30
 
@@ -65,7 +65,8 @@ ALTER TABLE `uzytkownicy`
 -- Indeksy dla tabeli `wplaty`
 --
 ALTER TABLE `wplaty`
-  ADD PRIMARY KEY (`id_wplaty`);
+  ADD PRIMARY KEY (`id_wplaty`),
+  ADD KEY `id_uzytkownika` (`id_uzytkownika`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -82,6 +83,16 @@ ALTER TABLE `uzytkownicy`
 --
 ALTER TABLE `wplaty`
   MODIFY `id_wplaty` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `wplaty`
+--
+ALTER TABLE `wplaty`
+  ADD CONSTRAINT `wplaty_ibfk_1` FOREIGN KEY (`id_uzytkownika`) REFERENCES `uzytkownicy` (`id_uzytkownika`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
