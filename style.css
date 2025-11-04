@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin-block: 0;
+}
+
+.mops {
+    background-color: rgba(21, 33, 122, 0.904);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(29, 107, 216, 0.8);
+}
+
+.diwy {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.pierogi {
+    display: flex;
+    gap: 5px;
+    margin-right: 5px;
+}
+
+.Iwant_to_talk_to_the_manager {
+    background-color: rgb(77, 73, 183);
+    border: 2px solid #1d6bd8e1;
+    color: rgb(0, 179, 255);
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 55px;
+    border-radius: 5px;
+}
+
+.Iwant_to_talk_to_the_manager:hover {
+    background-color: #1d6bd8e1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.cos {
+    background: linear-gradient(135deg, rgba(39, 50, 139, 0.9), rgba(21, 33, 122, 0.9));
+    height: 630px;
+}
+
+.nvm {
+    background-color: rgba(21, 33, 122, 0.904);
+    height: 40px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(91, 91, 255);
+}
+
+.karta {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    font-size: 2.5em;
+}
+form{
+    text-align: center;
+}
