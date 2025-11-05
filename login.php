@@ -12,6 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if($row["haslo"] == $password){
             setcookie("login", $login, time() + (86400 * 30), "/");
             setcookie("password", $password, time() + (86400 * 30), "/");
+            header("Location: dashboard.html");
         }
     }
 }
@@ -32,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <nav>
             <a class="Iwant_to_talk_to_the_manager" href='login.php'">Logowanie</a>
             <a class="Iwant_to_talk_to_the_manager" href='register.html'">Rejestracja</a>
-            <a class="Iwant_to_talk_to_the_manager" href='dashboard.html'">Panel klienta</a>
+            <a class="Iwant_to_talk_to_the_manager" href='chceck.php'">Panel klienta</a>
             <a class="Iwant_to_talk_to_the_manager" href='about.html'">O funduszu</a>
             <a class="Iwant_to_talk_to_the_manager" href='contact.html'">Kontakt</a>
             <a class="Iwant_to_talk_to_the_manager" href='calculator.html'">Kalkulator</a>

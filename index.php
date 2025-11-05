@@ -10,22 +10,14 @@
     <header>
         <h1>STRONA</h1>
         <nav>
+            <a class="Iwant_to_talk_to_the_manager" href='login.php'">Logowanie</a>
+            <a class="Iwant_to_talk_to_the_manager" href='register.html'">Rejestracja</a>
             <a class="Iwant_to_talk_to_the_manager" href='about.html'">O funduszu</a>
             <a class="Iwant_to_talk_to_the_manager" href='contact.html'">Kontakt</a>
             <a class="Iwant_to_talk_to_the_manager" href='calculator.html'">Kalkulator</a>
             <a class="Iwant_to_talk_to_the_manager" href='news.html'">Aktualności</a>
             <a class="Iwant_to_talk_to_the_manager" href='Regulamin.html'">Regulamin</a>
             <a class="Iwant_to_talk_to_the_manager" href='index.html'">Strona głowna</a>
-            <?php
-                if(isset($_COOKIE["login"]) && isset($_COOKIE["password"])){
-                    echo "<a class=Iwant_to_talk_to_the_manager href=dashboard.html>Użytkownik</a>";
-                }
-                else{
-                    echo "<a class=Iwant_to_talk_to_the_manager href=login.php>Logowanie</a>";
-                    echo "<a class=Iwant_to_talk_to_the_manager href=register.html>Rejestracja</a>";
-                }
-
-            ?>
         </nav>
     </header>
 
