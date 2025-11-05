@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Lis 04, 2025 at 11:00 AM
+-- Generation Time: Lis 05, 2025 at 10:09 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.0.30
 
@@ -24,6 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `uwagi`
+--
+
+CREATE TABLE `uwagi` (
+  `id_uwagi` int(11) NOT NULL,
+  `id_uzytkownika` int(11) DEFAULT NULL,
+  `temat` varchar(25) DEFAULT NULL,
+  `tresc` text DEFAULT NULL,
+  `data` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `uzytkownicy`
 --
 
@@ -34,6 +48,13 @@ CREATE TABLE `uzytkownicy` (
   `adres` varchar(50) DEFAULT NULL,
   `aktualne_srodki` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `uzytkownicy`
+--
+
+INSERT INTO `uzytkownicy` (`id_uzytkownika`, `login`, `haslo`, `adres`, `aktualne_srodki`) VALUES
+(23, 'Mateusz', '1234567890', 'mateuszzawisza13@gmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -52,6 +73,13 @@ CREATE TABLE `wplaty` (
 --
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `uwagi`
+--
+ALTER TABLE `uwagi`
+  ADD PRIMARY KEY (`id_uwagi`),
+  ADD KEY `id_uzytkownika` (`id_uzytkownika`);
 
 --
 -- Indeksy dla tabeli `uzytkownicy`
@@ -73,10 +101,16 @@ ALTER TABLE `wplaty`
 --
 
 --
+-- AUTO_INCREMENT for table `uwagi`
+--
+ALTER TABLE `uwagi`
+  MODIFY `id_uwagi` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `id_uzytkownika` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_uzytkownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `wplaty`
@@ -87,6 +121,12 @@ ALTER TABLE `wplaty`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `uwagi`
+--
+ALTER TABLE `uwagi`
+  ADD CONSTRAINT `uwagi_ibfk_1` FOREIGN KEY (`id_uzytkownika`) REFERENCES `uzytkownicy` (`id_uzytkownika`);
 
 --
 -- Constraints for table `wplaty`
