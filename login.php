@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST['password'];
     $conn = mysqli_connect("localhost","root","","arosaka");
 
-    $sql = sprintf("Select * from uzytkownicy where adres = " . mysqli_real_escape_string($conn, $login));
+    $sql = "Select * from uzytkownicy where adres = " . mysqli_real_escape_string($conn, $login);
     $result = mysqli_query($conn, $sql);
 
     while($row = mysqli_fetch_assoc($result)){
@@ -19,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 }
+
 ?>
 
 <!DOCTYPE html>
