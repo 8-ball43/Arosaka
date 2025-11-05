@@ -1,18 +1,24 @@
 body {
     box-sizing: border-box;
     margin-block: 0;
+    margin: 0px;
 }
 
-.mops {
+header {
     background-color: rgba(21, 33, 122, 0.904);
-    width: 100%;
+    width: auto;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-    border-bottom: 1px solid rgba(29, 107, 216, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+header h1{
+    color: #ffffffe1;
+    font-weight: bold;
 }
 
 .diwy {
@@ -23,22 +29,25 @@ body {
 
 .pierogi {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     margin-right: 5px;
 }
 
 .Iwant_to_talk_to_the_manager {
-    background-color: rgb(77, 73, 183);
-    border: 2px solid #1d6bd8e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(0, 179, 255);
-    padding: 6px 12px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 2vh;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
     min-width: 55px;
+    width: 7vw;
+    height: 1vh;
     border-radius: 5px;
 }
 
@@ -48,18 +57,16 @@ body {
     transform: translateY(-2px);
 }
 
-.cos {
+.mainContent {
     background: linear-gradient(135deg, rgba(39, 50, 139, 0.9), rgba(21, 33, 122, 0.9));
-    height: 630px;
+    height: 100vh;
 }
 
-.nvm {
+footer {
     background-color: rgba(21, 33, 122, 0.904);
-    height: 40px;
+    padding: 15px;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     color: rgb(91, 91, 255);
 }
 
