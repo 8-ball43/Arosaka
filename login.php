@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </header>
 
     <div class="cos">
-        <form   action="login.php"  method="post">
+        <form method="post">
         <h2 style="text-align:center">Login</h2>
         <div class="col">
             <input type="text" name="login" placeholder="Login" required>
