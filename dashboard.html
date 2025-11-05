@@ -22,7 +22,20 @@
         </nav>
     </header>
 
-    <div class="mainContent"></div>
+    <div class="mainContent">
+        <form action="dashboard.php" class="payment">
+            <label for="lname">Ilość wpłaty:</label><br>
+            <input type="number" id="kwota" name="kwota" value="10" class="value" min="1"><br>
+            <input type="radio" id="pln" name="opis" value="PLN" class="radio">
+            <label for="pln">PLN</label><br>
+            <input type="radio" id="eur" name="opis" value="EUR" class="radio">
+            <label for="eur">EUR</label><br>
+            <input type="radio" id="usd" name="opis" value="USD" class="radio">
+            <label for="usd">USD</label>
+            <br><br>
+            <input type="submit" value="Wpłać" class="submit">
+        </form>
+    </div>
 
     <footer>Strona stworzona przez: Mateusz Zawisza, Krzysztof Mękal i józef sobolewski</footer>
 </body>

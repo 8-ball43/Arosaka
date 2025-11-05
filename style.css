@@ -102,3 +102,58 @@ form{
 a{
     color: red;
 }
+
+.payment{
+    text-align: center;
+    color: white;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 10% 0 0 0;
+}
+
+
+.payment .value{
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    border: 1px white solid;
+    border-radius: 15px;
+    color: white;
+    font-size: 250%;
+    background-color: #00000067;
+}
+
+.payment label{
+    font-size: 125%;
+}
+
+.payment .radio{
+    width: 20px;
+    height: 20px;
+}
+
+.payment .submit{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px white solid;
+    border-radius: 15px;
+    width: 150px;
+    height: 60px;
+    color: white;
+    font-size: 120%;
+    transition-duration: 0.3s;
+}
+
+.payment .submit:hover{
+    transform: translateY(-12px);
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    width: 180px;
+    height: 72px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 150%;
+    cursor: pointer;
+}
