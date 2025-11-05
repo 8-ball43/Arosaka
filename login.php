@@ -10,12 +10,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     while($row = mysqli_fetch_assoc($result)){
         if($row["haslo"] == $password){
-            echo "Correct Password";
             setcookie("login", $login, time() + (86400 * 30), "/");
             setcookie("password", $password, time() + (86400 * 30), "/");
-        }
-        else{
-            echo "Incorrect Password";
         }
     }
 }
@@ -42,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <a class="Iwant_to_talk_to_the_manager" href='calculator.html'">Kalkulator</a>
             <a class="Iwant_to_talk_to_the_manager" href='news.html'">Aktualności</a>
             <a class="Iwant_to_talk_to_the_manager" href='Regulamin.html'">Regulamin</a>
-            <a class="Iwant_to_talk_to_the_manager" href='index.html'">Strona głowna</a>
+            <a class="Iwant_to_talk_to_the_manager" href='index.php'">Strona głowna</a>
         </nav>
     </header>
 
@@ -60,11 +56,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
         </form>
     </div>
-</body>
-</html>
-    </div>
 
-    <footer class="nvm" style="text-align: center; color: rgb(91, 91, 255);">Strona stworzona przez: Mateusz Zawisza, Krzysztof Mękal i józef sobolewski</footer>
+    <footer>Strona stworzona przez: Mateusz Zawisza, Krzysztof Mękal i józef sobolewski</footer>
 </body>
 </html>
 
