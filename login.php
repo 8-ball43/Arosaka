@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST['password'];
     $conn = mysqli_connect("localhost","root","","arosaka");
 
-    $sql = sprintf("Select * from uzytkownicy where adres = " . mysqli_real_escape_string($conn, $login));
+    $sql = "SELECT * FROM uzytkownicy WHERE adres = '" . mysqli_real_escape_string($conn, $login) . "'";
     $result = mysqli_query($conn, $sql);
 
     while($row = mysqli_fetch_assoc($result)){
@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </header>
 
     <div class="cos">
-        <form method="post">
+        <form   action="login.php"  method="post">
         <h2 style="text-align:center">Login</h2>
         <div class="col">
             <input type="text" name="login" placeholder="Login" required>
