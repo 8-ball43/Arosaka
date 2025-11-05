@@ -31,21 +31,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="mops">
-        <h1 class="diwy" style="color: #2981fce1;">STRONA</h1>
-        <div class="pierogi">
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='index.html'">Strona główna</button>
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='register.html'">Rejestracja</button>
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='dashboard.html'">Panel klienta</button>
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='about.html'">O funduszu</button>
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='contact.html'">Kontakt</button>
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='calculator.html'">Kalkulator</button>
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='news.html'">Aktualności</button>
-            <button class="Iwant_to_talk_to_the_manager" onclick="location.href='Regulamin.html'">Regulamin</button>
-        </div>
+    <header>
+        <h1>STRONA</h1>
+        <nav>
+            <a class="Iwant_to_talk_to_the_manager" href='login.php'">Logowanie</a>
+            <a class="Iwant_to_talk_to_the_manager" href='register.html'">Rejestracja</a>
+            <a class="Iwant_to_talk_to_the_manager" href='dashboard.html'">Panel klienta</a>
+            <a class="Iwant_to_talk_to_the_manager" href='about.html'">O funduszu</a>
+            <a class="Iwant_to_talk_to_the_manager" href='contact.html'">Kontakt</a>
+            <a class="Iwant_to_talk_to_the_manager" href='calculator.html'">Kalkulator</a>
+            <a class="Iwant_to_talk_to_the_manager" href='news.html'">Aktualności</a>
+            <a class="Iwant_to_talk_to_the_manager" href='Regulamin.html'">Regulamin</a>
+            <a class="Iwant_to_talk_to_the_manager" href='index.html'">Strona głowna</a>
+        </nav>
     </header>
 
-    <div class="cos">
+    <div class="mainContent">
         <form   action="login.php"  method="post">
         <h2 style="text-align:center">Login</h2>
         <div class="col">
