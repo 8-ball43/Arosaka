@@ -228,17 +228,21 @@ a{
 }
 
 .cont table, th {
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #ffffff48;
   border-collapse: collapse;
-  padding: 20px;
+  padding: 15px;
   font-weight: bold;
   font-size: 150%;
+  border-radius: 10px;
 }
 
 .cont td {
-  border: 1px solid rgb(255, 255, 255);
+  border: none;
+  background-color: #ffffff1e;
   border-collapse: collapse;
-  padding: 15px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .textUs{
