@@ -23,6 +23,10 @@
     </header>
 
     <div class="mainContent">
+        <form action="logout.php" method="post">
+            <br><br>
+            <button type="submit" class="logout">Wyloguj się</button>
+        </form>
         <form action="dashboard.php" class="payment" method="post">
             <label for="lname">Ilość wpłaty:</label><br>
             <input type="number" id="kwota" name="kwota" value="10" class="value" min="1"><br>
@@ -34,10 +38,6 @@
             <label for="usd">USD</label>
             <br><br>
             <input type="submit" value="Wpłać" class="submit">
-        </form>
-
-        <form action="logout.php" method="post">
-            <button type="submit">Wyloguj się</button>
         </form>
     </div>
 

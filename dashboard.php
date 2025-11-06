@@ -15,5 +15,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql->execute();           
         $conn->close();
     }
+    header("Location: dashboard.html");
 }
 ?>
