@@ -44,15 +44,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </header>
 
     <div class="mainContent">
-        <form   action="login.php"  method="post">
+        <form   action="login.php"  method="post" class="login">
         <h2 style="text-align:center">Login</h2>
         <div class="col">
-            <input type="text" name="login" placeholder="Login" required>
             <br>
-            <input type="password" name="password" placeholder="Password" required>
-            <br>
-            <input type="submit" value="Login">
-            <br>
+            <input type="text" name="login" placeholder="Login" required class="area">
+            <br><br>
+            <input type="password" name="password" placeholder="Password" required class="area">
+            <br><br>
+            <input type="submit" value="Login" class="btn">
+            <br><br><br><br>
             <label>Nie masz jescze konta!<a href="register.html">Zarejestruj się</a></label>
         </div>
         </form>
