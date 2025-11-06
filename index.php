@@ -12,7 +12,7 @@
         <nav>
             <a class="Iwant_to_talk_to_the_manager" href='login.php'">Logowanie</a>
             <a class="Iwant_to_talk_to_the_manager" href='register.html'">Rejestracja</a>
-            <a class="Iwant_to_talk_to_the_manager" href='check.php'">Panel klienta</a>
+            <a class="Iwant_to_talk_to_the_manager" href='chweck.php'">Panel klienta</a>
             <a class="Iwant_to_talk_to_the_manager" href='about.html'">O funduszu</a>
             <a class="Iwant_to_talk_to_the_manager" href='contact.html'">Kontakt</a>
             <a class="Iwant_to_talk_to_the_manager" href='calculator.html'">Kalkulator</a>
