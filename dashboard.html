@@ -23,7 +23,7 @@
     </header>
 
     <div class="mainContent">
-        <form action="dashboard.php" class="payment" method="post">
+        <form action="dashboard.php" class="payment" method="post" id="form">
             <label for="lname">Ilość wpłaty:</label><br>
             <input type="number" id="kwota" name="kwota" value="10" class="value" min="1"><br>
             <input type="radio" id="pln" name="opis" value="PLN" class="radio">
@@ -33,7 +33,8 @@
             <input type="radio" id="usd" name="opis" value="USD" class="radio">
             <label for="usd">USD</label>
             <br><br>
-            <input type="submit" value="Wpłać" class="submit">
+            <input type="submit" id="submit" value="Wpłać" class="submit">
+            <p id="p"></p>
         </form>
         <a class="Iwant_to_talk_to_the_manager" href="wallet.php">Mój protwel</a>
         <form action="logout.php" method="post">
@@ -43,5 +44,18 @@
 
 
     <footer>Strona stworzona przez: Mateusz Zawisza, Krzysztof Mękal i józef sobolewski</footer>
+    <script>
+        let form = document.getElementById("form");
+        form.addEventListener("submit",function (e){
+            
+             let selectedCurrency = document.querySelector("input[name='opis']:checked");
+
+             if(!selectedCurrency){
+                e.preventDefault();
+                document.getElementById("p").innerHTML = "Podaj walute";
+                p.style.color="red";
+             }
+        });
+    </script>
 </body>
 </html>
