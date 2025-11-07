@@ -52,13 +52,12 @@
             </div>
             <div class="history">
                 <h2>Historia twoich przelewów</h2>
-
-                
                 <table border>
                     <tr>
                         <th>Kwota</th>
                         <th>Opis</th>
                         <th>Data</th>
+                        <th>Wzrost</th>
                     </tr>
                     <?php
                      $stmt2 = mysqli_prepare($conn,"SELECT wplaty.kwota, wplaty.opis, wplaty.data FROM wplaty INNER JOIN uzytkownicy ON wplaty.id_uzytkownika = uzytkownicy.id_uzytkownika WHERE uzytkownicy.adres = ?");
@@ -66,7 +65,7 @@
                      mysqli_stmt_execute($stmt2);
                      $result = mysqli_stmt_get_result($stmt2);
                      while($row = mysqli_fetch_assoc($result)) {
-                        echo("<tr><td>".$row['kwota']."</td><td>".$row['opis']."</td><td>".$row['data']."</td></tr>");
+                        echo("<tr><td>".$row['kwota']."</td><td>".$row['opis']."</td><td>".$row['data']."</td><td>+0</td></tr>");
                      }
                      
                     ?>
@@ -75,3 +74,6 @@
         </main>
     </body>
 </html>
+<script>
+    
+</script>
