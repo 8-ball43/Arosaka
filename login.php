@@ -35,11 +35,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <a class="Iwant_to_talk_to_the_manager" href='register.html'">Rejestracja</a>
             <a class="Iwant_to_talk_to_the_manager" href='chceck.php'">Panel klienta</a>
             <a class="Iwant_to_talk_to_the_manager" href='about.html'">O funduszu</a>
-            <a class="Iwant_to_talk_to_the_manager" href='contact.html'">Kontakt</a>
-            <a class="Iwant_to_talk_to_the_manager" href='calculator.html'">Kalkulator</a>
+            <a class="Iwant_to_talk_to_the_manager" href='check_3.php'">Kontakt</a>
+            <a class="Iwant_to_talk_to_the_manager" href='check_2.php'">Kalkulator</a>
             <a class="Iwant_to_talk_to_the_manager" href='news.html'">Aktualności</a>
             <a class="Iwant_to_talk_to_the_manager" href='Regulamin.html'">Regulamin</a>
-            <a class="Iwant_to_talk_to_the_manager" href='index.php'">Strona głowna</a>
+            <a class="Iwant_to_talk_to_the_manager" href='index.html'">Strona głowna</a>
         </nav>
     </header>
 
