@@ -10,19 +10,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_COOKIE["login"]) && isset($_COOKIE["password"])){
         $login = $_COOKIE["login"];
         $conn = mysqli_connect("localhost","root","","arosaka");
-        $result = mysqli_query($conn, "SELECT id_uzytkownika FROM uzytkownicy WHERE adres = '$login'");
+        $result = mysqli_query($conn, "SELECT * FROM uzytkownicy WHERE adres = '$login'");
 
         $userID = mysqli_fetch_assoc($result);
         $ID = $userID["id_uzytkownika"];
+        $srodki = $userID["srodki_USD"];
 
         $sql = $conn->prepare("INSERT INTO wplaty (id_uzytkownika,kwota,opis) values(?,?,?)");
+
         $sql->bind_param("sss", $ID, $kwota, $opis);
         if(mysqli_stmt_execute($sql)) {
             header("Location:wallet.php");
         }
-        
-         $conn->close();
-        
+        $conn->close();
     }
  }
 }
