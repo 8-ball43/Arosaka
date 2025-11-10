@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Zainwestuj</h1>
+    </header>
+    <nav>
+        <a href="import.php" class="Iwant_to_talk_to_the_manager">Wróć</a>
+    </nav>
+    <main class="mainContent">
+        <form action="money.php" method="post">
+            <label>Podaj kwote</label>
+            <input type="number" name="money" id="money" required>
+            <br>
+            <br>
+            <label>Podaj walute</label>
+            <select id="value" name="value" required>
+                <option value="1">PLN</option>
+                <option value="2">EUR</option>
+                <option value="3">USD</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Zainwestuj</button>
+        </form>
+    </main>
+</body>
+</html>

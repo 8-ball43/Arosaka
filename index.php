@@ -18,7 +18,7 @@
             <a class="Iwant_to_talk_to_the_manager" href='check_2.php'">Kalkulator</a>
             <a class="Iwant_to_talk_to_the_manager" href='news.html'">Aktualności</a>
             <a class="Iwant_to_talk_to_the_manager" href='Regulamin.html'">Regulamin</a>
-            <a class="Iwant_to_talk_to_the_manager" href='index.php'">Strona głowna</a>
+            <a class="Iwant_to_talk_to_the_manager" href="import.php">Zainwestuj</a>
         </nav>
     </header>
 
