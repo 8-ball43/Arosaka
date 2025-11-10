@@ -1,4 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <?php
 
 $inputFile = "Kopia Arkusz weryfikacji spółek - DJIA - baza danych.csv";
 $outputFile = "djia_clean.csv";
@@ -23,7 +32,7 @@ $output = fopen($outputFile, "w");
 fputcsv($output, ["company", "ticker", "date", "close"]);
 
 echo ("<h2>Dane DJIA (converted)</h2>");
-echo("<table border='1' cellpadding='4' cellspacing='0'>");
+echo("<table>");
 echo ("<tr><th>Company</th><th>Ticker</th><th>Date</th><th>Close</th></tr>");
 
 // każda spółka zajmuje 2 kolumny: Name/Ticker oraz Date/Close
@@ -69,3 +78,5 @@ if(mysqli_stmt_execute($stmt)){
     echo("tak");
 }
 ?>
+</body>
+</html>
