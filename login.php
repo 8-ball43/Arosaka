@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if($row["haslo"] == $password){
             setcookie("login", $login, time() + (86400 * 30), "/");
             setcookie("password", $password, time() + (86400 * 30), "/");
-            header("Location: dashboard.html");
+            header("Location: dash_board.php");
         }
     }
 }

@@ -53,7 +53,7 @@
                 $result = mysqli_query($conn, "SELECT * FROM administratozy WHERE id_uzytkownika = $ID");
 
                 if(mysqli_fetch_assoc($result)){
-                    echo "<a class=Iwant_to_talk_to_the_manager href=wallet.php>Mój portwel2</a>";
+                    echo "<a class=Iwant_to_talk_to_the_manager href=dash_board_admin.php>Panel Admina</a>";
                 }
             ?>
         </form>
