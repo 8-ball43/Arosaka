@@ -1,0 +1,90 @@
+<?php
+if(!isset($_COOKIE['login'])){
+    header("Location:login.php");
+    exit();
+}
+$login = $_COOKIE["login"];
+$password = $_COOKIE["password"];
+$conn = mysqli_connect("localhost","root","","arosaka");
+$reuslt_one = mysqli_query($conn,"SELECT*FROM uzytkownicy WHERE adres='$login'");
+$row = mysqli_fetch_assoc($reuslt_one);
+if($row['haslo'] != $password){
+    header("Location:login.php");
+    exit();
+}
+
+?>
+?>
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>STRONA</h1>
+        <nav>
+            <a class="Iwant_to_talk_to_the_manager" href='login.php'">Logowanie</a>
+            <a class="Iwant_to_talk_to_the_manager" href='register.html'">Rejestracja</a>
+            <a class="Iwant_to_talk_to_the_manager" href='dash_board.php'">Panel klienta</a>
+            <a class="Iwant_to_talk_to_the_manager" href='about.html'">O funduszu</a>
+            <a class="Iwant_to_talk_to_the_manager" href='contact.php'">Kontakt</a>
+            <a class="Iwant_to_talk_to_the_manager" href='calculator.php'">Kalkulator</a>
+            <a class="Iwant_to_talk_to_the_manager" href='news.html'">Aktualności</a>
+            <a class="Iwant_to_talk_to_the_manager" href='Regulamin.html'">Regulamin</a>
+            <a class="Iwant_to_talk_to_the_manager" href='index.php'">Strona głowna</a>
+        </nav>
+    </header>
+
+    <div class="mainContent">
+        <br>
+        <br>
+        <table border class="cont">
+            <tr>
+                <th>Właściciel</th>
+                <th>Nr. Telefonu</th>
+                <th>Adres E-mail</th>
+            </tr>
+            <tr>
+                <td>Krzysztof Mękal</td>
+                <td>111 222 333</td>
+                <td>krysziek@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Józef Sobolewski</td>
+                <td>222 111 333</td>
+                <td>jozef@gmai.com</td>
+            </tr>
+            <tr>
+            <td>Mateusz Zawisza</td>
+            <td>333 222 111</td>
+            <td>mateuszzaw2@gmail.com</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form action="contact-handler.php" method="post" class="textUs">
+            <h2>Napisz do nas</h2>
+            <br>
+            <br>
+            <label for="title">Temat:</label>
+            <input type="text" id="title" name="title" required>
+            <br>
+            <br>
+            <label for="text">Treść:</label>
+            <textarea id="text" name="text" required></textarea>
+            <br>
+            <br>
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+
+    <footer>Strona stworzona przez: Mateusz Zawisza, Krzysztof Mękal i józef sobolewski</footer>
+</body>
+</html>

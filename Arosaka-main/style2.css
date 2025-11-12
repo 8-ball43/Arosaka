@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(14, 23, 78);
+    color: white;
+    font-weight: bold;
+}
+
+table{
+    width: 70%;
+    text-align: center;
+}
+
+h2{
+    padding: 20px;
+    font-size: 200%;
+}
+
+th{
+    border: 2px white solid;
+    font-size: 150%;
+    background-color: rgba(255, 255, 255, 0.432);
+}
+
+td{
+    font-size: 150%;
+    padding: 5px -12px 5px -12px;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
