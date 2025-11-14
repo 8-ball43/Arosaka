@@ -2,8 +2,6 @@
 if($_SERVER['REQUEST_METHOD'] == "POST") {
 $title = $_POST['title'];
 $text = $_POST['text'];
-
-
 $active_user = $_COOKIE['login'];
 $conn = mysqli_connect("localhost","root","","arosaka");
 $sql = "SELECT id_uzytkownika FROM uzytkownicy WHERE adres = '$active_user' ";
