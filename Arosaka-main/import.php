@@ -1,3 +1,26 @@
+<?php
+ if(!isset($_COOKIE['login'])){
+    header("location:login.php");
+    exit();
+ }
+ else{
+    $conn = mysqli_connect("localhost","root","","arosaka");
+
+    $adres = $_COOKIE['login'];
+    $password = $_COOKIE['password'];
+
+    $stmt = mysqli_prepare($conn,"SELECT*FROM uzytkownicy WHERE adres = ?");
+    mysqli_stmt_bind_param($stmt,"s",$adres);
+    if(mysqli_stmt_execute($stmt)){
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_assoc($result);
+        if($row['haslo'] != $password){
+            header("location:login.php");
+            exit();
+        }
+    }
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +30,32 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="money.php" method="post">
+    <label>Podaj kwote:</label>
+    <input type="number" id="money" name="money" required><br><br>
+    <select id="value" name="value">
+        <option value="1">PLN</option>
+        <option value="2">EUR</option>
+        <option value="3">USD</option>
+    </select>
+    <select>
+     <option value="1">American Express Co</option>
+     <option value="2">3M Co</option>
+     <option value="3">Amgen Inc</option>
+     <option value="4">Apple Inc</option>
+     <option value="5">Boeing Co</option>
+     <option value="6">Caterpillar Inc</option>
+     <option value="7">Chevron Corp</option>
+     <option value="8">Cisco Systems Inc</option>
+     <option value="9">Coca-Cola Co</option>
+     <option value="10">Dow Inc</option>
+     <option value="11">Goldman Sachs Group Inc</option>
+     <option value="12">Home Depot Inc</option>
+     <option value="13">Honeywell International Inc</option>    
+    <select>
+        <br><br>
+        <button type="submit">Zainwestuj</button>
+    </form>
     <?php
 
 $inputFile = "Kopia Arkusz weryfikacji spółek - DJIA - baza danych.csv";
@@ -61,6 +110,7 @@ for ($col = 0; $col < count($companyRow); $col += 2) {
                 <td>$ticker</td>
                 <td>$date</td>
                 <td>$close</td>
+                
               </tr>");
     }
 }
@@ -77,6 +127,8 @@ mysqli_stmt_bind_param($stmt,"ssss",$company,$ticker,$date,$close);
 if(mysqli_stmt_execute($stmt)){
     echo("tak");
 }
+
 ?>
+
 </body>
 </html>

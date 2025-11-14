@@ -1,3 +1,33 @@
+<?php
+ if(!isset($_COOKIE['login'])){
+    header("Location:login.php");
+ }
+ else{
+    $adres = $_COOKIE['login'];
+    $password = $_COOKIE['password'];
+    $conn = mysqli_connect("localhost","root","","arosaka");
+    $stmt = mysqli_prepare($conn,"SELECT*FROM uzytkownicy WHERE adres = ?");
+    mysqli_stmt_bind_param($stmt,"s",$adres);
+    if(mysqli_stmt_execute($stmt)){
+        
+    
+    $result_one = mysqli_stmt_get_result($stmt);
+    $row_one = mysqli_fetch_assoc($result_one);
+    if($row_one['haslo'] != $password){
+        header("Location: login.php");
+        exit();
+    }
+    }
+    else{
+        $result_second = mysqli_query($conn, "SELECT*FROM administratozy");
+        $row_second = mysqli_fetch_assoc($result_second);
+        if($row_one['id_uzytkownika'] != $row_second['id_uzytkownika']){
+            header("Location:login.php");
+            exit();
+        }
+    }
+ }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +52,7 @@
                         <th>DATA</th>
                     <tr>
                 <?php
-                 $conn = mysqli_connect("localhost","root","","arosaka");
+                 
                  $sql = "SELECT  uzytkownicy.login ,uwagi.id_uwagi, uwagi.temat, uwagi.tresc, uwagi.data FROM uwagi INNER JOIN uzytkownicy ON uwagi.id_uzytkownika = uzytkownicy.id_uzytkownika ORDER BY data";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_assoc($result)){

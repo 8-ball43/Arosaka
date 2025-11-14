@@ -6,15 +6,19 @@ if(!isset($_COOKIE['login'])){
 $login = $_COOKIE["login"];
 $password = $_COOKIE["password"];
 $conn = mysqli_connect("localhost","root","","arosaka");
-$reuslt_one = mysqli_query($conn,"SELECT*FROM uzytkownicy WHERE adres='$login'");
+$stmt = mysqli_prepare($conn,"SELECT*FROM uzytkownicy WHERE adres = ?");
+mysqli_stmt_bind_param($stmt,"s",$login);
+if(mysqli_stmt_execute($stmt)){
+    $reuslt_one = mysqli_stmt_get_result($stmt);
 $row = mysqli_fetch_assoc($reuslt_one);
-if($row['haslo'] != $password){
+ if($row['haslo'] != $password){
     header("Location:login.php");
     exit();
+ }
 }
 
 ?>
-?>
+
 
 <!DOCTYPE html>
 <html lang="pl-PL">

@@ -33,9 +33,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <nav>
             <a class="Iwant_to_talk_to_the_manager" href='login.php'">Logowanie</a>
             <a class="Iwant_to_talk_to_the_manager" href='register.html'">Rejestracja</a>
-            <a class="Iwant_to_talk_to_the_manager" href='chceck.php'">Panel klienta</a>
+            <a class="Iwant_to_talk_to_the_manager" href='dash_board.php'">Panel klienta</a>
             <a class="Iwant_to_talk_to_the_manager" href='about.html'">O funduszu</a>
-            <a class="Iwant_to_talk_to_the_manager" href='check_3.php'">Kontakt</a>
+            <a class="Iwant_to_talk_to_the_manager" href='contact.php'">Kontakt</a>
             <a class="Iwant_to_talk_to_the_manager" href='calculator.php'">Kalkulator</a>
             <a class="Iwant_to_talk_to_the_manager" href='news.html'">Aktualności</a>
             <a class="Iwant_to_talk_to_the_manager" href='Regulamin.html'">Regulamin</a>
