@@ -70,13 +70,6 @@ fclose($output);
 echo ("</table><hr>");
 echo ("<h3>✅ Konwersja zakończona</h3>");
 echo ("Plik wynikowy: <strong>$outputFile</strong><br>");
-
-$conn = mysqli_connect("localhost","root","","arosaka");
-$stmt = mysqli_prepare($conn, "INSERT INTO spolki(company, ticker, date, close)VALUES(?,?,?,?)");
-mysqli_stmt_bind_param($stmt,"ssss",$company,$ticker,$date,$close);
-if(mysqli_stmt_execute($stmt)){
-    echo("tak");
-}
 ?>
 </body>
 </html>
